@@ -5,7 +5,12 @@ on:
 
 jobs:
 
-  test:
+  test1:
     runs-on: windows-latest
+    steps:
+      - run: docker run ghcr.io/coturn/coturn:latest
+
+  test2:
+    runs-on: macos-latest
     steps:
       - run: docker run ghcr.io/coturn/coturn:latest
