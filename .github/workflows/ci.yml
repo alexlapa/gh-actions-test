@@ -13,4 +13,5 @@ jobs:
   test2:
     runs-on: macos-latest
     steps:
+      - uses: docker-practice/actions-setup-docker@master
       - run: docker run ghcr.io/coturn/coturn:latest
