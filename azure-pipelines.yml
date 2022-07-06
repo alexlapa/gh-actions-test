@@ -1,0 +1,12 @@
+trigger:
+  branches:
+    include:
+      - refs/heads/master
+      - refs/tags/*
+
+jobs:
+  - job: test_formatting
+    displayName: "Run cargo fmt"
+    steps:
+      - template: ci/azure-install-rust.yml
+      - script: cargo fmt --all -- --check
